@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         var previousNumber: Double = 0
         var operation: String = ""
 
-        // Обработка нажатия на цифры
+        
         @IBAction func numberPressed(_ sender: UIButton) {
             if let numberValue = sender.titleLabel?.text {
                 currentNumber += numberValue
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
             }
         }
         
-        // Обработка операций (+, -, *, /)
+        
         @IBAction func operationPressed(_ sender: UIButton) {
             if let operationSymbol = sender.titleLabel?.text, let number = Double(currentNumber) {
                 previousNumber = number
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
             }
         }
         
-        // Вычисление результата
+        
         @IBAction func equalsPressed(_ sender: UIButton) {
             if let number = Double(currentNumber) {
                 var result: Double = 0
@@ -88,7 +88,7 @@ class ViewController: UIViewController {
                     break
                 }
                 
-                // Форматируем вывод: если результат целый, показываем без точки
+                
                        if result == floor(result) {
                            TextView.text = String(Int(result))
                        } else {
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
             }
         }
         
-        // Очистка экрана
+        
         @IBAction func clearPressed(_ sender: UIButton) {
             currentNumber = ""
             previousNumber = 0
